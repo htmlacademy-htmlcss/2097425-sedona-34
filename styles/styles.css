@@ -1,0 +1,377 @@
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "PT Sans", sans-serif, "Arial"; 
+    font-size: 22px;
+    line-height: 26px;
+    background: #F2F2F2;
+    color: #000000;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+  }
+
+
+.navigation-link {
+    color: inherit;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none;
+    }
+
+    .navigation-user {
+        background-image: url(".../images/search.svg");
+        background-image: url(".../images/favorite.svg");
+    }
+
+    /** Не поняла, как добавить две декоративные картинки. В одном правиле? **/
+
+.navigation-link-wanting-here {
+    color: #FFFFFF;
+    font-weight: 700;
+    background-color: #756157;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+ }
+
+ .number-of-favorites {
+    color: #FFFFFF;
+    background-color: #7DB54F;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: -0.1em;
+ }
+
+.main-index {
+    background-image: url("../images/sedona-background-mainpage.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.welcome-text {
+    text-align: center;
+}
+
+.advantages {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.sedona-is-a-small-town {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.reasons-why-sedona-is-better {
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+    font-weight: 400;
+}
+
+.main-advantage {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #82B3D3;
+}
+
+.advantages-description-main {
+    color: #FFFFFF;
+}
+
+.advantages h3 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+li.advantages-item h3 {
+text-transform: uppercase;
+}
+
+.advantage-2 {
+    background-image: url("../images/advantages/living.svg");
+    background-repeat: no-repeat;
+}
+
+.advantage-3 {
+    background-image: url("../images/advantages/food.svg");
+    background-repeat: no-repeat;
+    
+}
+
+.advantage-4 {
+    background-image: url("../images/advantages/souvenir.svg");
+    background-repeat: no-repeat;
+}
+
+.advantage-1, .advantage-5 {
+    background-color: #82B3D3;
+}
+
+.advantage-2, .advantage-4, .advantage-6, .advantage-8 {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantage-7 {
+    background: rgba(131, 179, 211, 0.2);
+}
+  
+
+
+.advantages .advantages-description {
+    color: #333333;
+    background-color: #83B3D3;
+}
+
+.interested-section {
+    
+    color: #000000;
+    background-color: #FFFFFF;
+    font-weight: 700;
+    text-align: center;
+}
+
+.interested-question {
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.select-dates {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333
+}
+
+.link-to-catalog {
+    color: #FFFFFF;
+    font-weight: 700;
+    background-color: #756157;
+    font-size: 20px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+/** не поняла, почему  цвет ссыли не меняется **/
+}
+
+.footer-subscribe {
+    background-image: url("../images/background.jpg");
+    color: #FFFFFF;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    text-align: center;
+}
+
+.subscribe-call-to-action {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    
+}
+
+.newsletter-button {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #82B3D3;
+    font-family: inherit;
+}
+
+.footer-bottom {
+    background-color: #FFFFFF;
+}
+
+.contact-number {
+    color:#000000;
+    font-size: 40px;
+    line-height: 40px;
+    font-style: normal;
+    background-color: #FFFFFF;
+    text-decoration: none;
+
+}
+
+.inner-header {
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.inner-header-title {
+    font-size: 60px;
+    line-height: 78px;
+    color: #FFFFFF;
+}
+
+.breadcumbs-item
+{
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.breadcumbs {
+    background-image: url("../images/arrow-to-the-right.svg");
+}
+
+fieldset {
+    color: #FFFFFF;
+}
+
+.category {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.search-hotel {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #82B3D3;
+    font-family: inherit;
+}
+
+.reset-search {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: inherit;
+}
+
+.number-hotels-found-perpage {
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.the-cheapest {
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+
+
+}
+
+.vision-per-page {
+    background-image: url("../images/view.svg");
+    background-repeat: no-repeat;
+}
+
+.product-card-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.product-list p{
+
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+}
+
+.product-list p.rate{
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333333;
+    background-color: #F2F2F2;
+}
+
+.product-card-button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.button-details {
+    background-color: #756157;
+    text-decoration: none;
+}
+
+.added-to-favorites {
+    background-color: #7DB54F; 
+    text-decoration: none;
+}
+
+.button-add-to-favorites {
+    background-color: #82B3D3; 
+    text-decoration: none;
+}
+
+.pagination-link {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #82B3D3;
+}
+
+.pagination-current {
+    color: #000000;
+    background-color: #F2F2F2;
+}
+
+.number-of-hotels-shown-perpage {
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.number-of-hotels-option {
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+}
+
