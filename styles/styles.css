@@ -4,29 +4,69 @@
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: "PT Sans";
     src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
-  }
+}
 
-  body {
-    font-family: "PT Sans", sans-serif, "Arial"; 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100%;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 22px;
     line-height: 26px;
     background: #F2F2F2;
     color: #000000;
-  }
+}
 
-  .container {
-    width: 100%;
-    margin: 0 auto;
+.page-container {
+    width: 1200px;
     background-color: #FFFFFF;
-  }
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* не получается липкий футер :( */
+}
+
+.mainpage-header {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.main-container {
+    flex-grow: 1;
+    /* не получается липкий футер :( */
+}
+
+.navigation {
+    display: flex;
+}
+
+
+
+.navigation-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
 
 
 .navigation-link {
@@ -34,14 +74,7 @@
     font-weight: 700;
     text-transform: capitalize;
     text-decoration: none;
-    }
-
-    .navigation-user {
-        background-image: url(".../images/search.svg");
-        background-image: url(".../images/favorite.svg");
-    }
-
-    /** Не поняла, как добавить две декоративные картинки. В одном правиле? **/
+}
 
 .navigation-link-wanting-here {
     color: #FFFFFF;
@@ -52,21 +85,31 @@
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
- }
+}
 
- .number-of-favorites {
+.number-of-favorites {
     color: #FFFFFF;
     background-color: #7DB54F;
     font-weight: 400;
     font-size: 10px;
     line-height: 13px;
     letter-spacing: -0.1em;
- }
+}
 
-.main-index {
+.main-container {
     background-image: url("../images/sedona-background-mainpage.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
+}
+
+.search-image {
+    background-image: url(".../images/search.svg");
+    background-repeat: no-repeat;
+}
+
+.favorites-image {
+    background-image: url(".../images/favorite.svg");
+    background-repeat: no-repeat;
 }
 
 .welcome-text {
@@ -78,6 +121,11 @@
     font-size: 18px;
     line-height: 21px;
     text-align: center;
+}
+
+.list-of-advantages-main {
+    display: flex;
+    padding: 0;
 }
 
 .sedona-is-a-small-town {
@@ -92,6 +140,24 @@
     line-height: 26px;
     color: #333333;
     font-weight: 400;
+}
+
+.advantages-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.advantages-list li:not(img) {
+    width: 400px;
+}
+
+.advantages .advantages-description {
+    color: #333333;
 }
 
 .main-advantage {
@@ -112,47 +178,62 @@
     line-height: 28px;
 }
 
+.second-part-advantages-list {
+    display: flex;
+}
+
+.column-direction {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    justify-content: center;
+}
+
 li.advantages-item h3 {
-text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .advantage-2 {
     background-image: url("../images/advantages/living.svg");
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .advantage-3 {
     background-image: url("../images/advantages/food.svg");
     background-repeat: no-repeat;
-    
+    background-position: center;
+
 }
 
 .advantage-4 {
     background-image: url("../images/advantages/souvenir.svg");
     background-repeat: no-repeat;
+    background-position: center;
 }
 
-.advantage-1, .advantage-5 {
+.advantage-1,
+.advantage-5 {
     background-color: #82B3D3;
+    display: flex;
+    /* вот не знаю, как указать блокам высотуЧ, ведь нельзя поставить display block и flex одновременно */
 }
 
-.advantage-2, .advantage-4, .advantage-6, .advantage-8 {
+
+.advantage-2,
+.advantage-4,
+.advantage-6,
+.advantage-8 {
     background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantage-7 {
     background: rgba(131, 179, 211, 0.2);
 }
-  
 
-
-.advantages .advantages-description {
-    color: #333333;
-    background-color: #83B3D3;
-}
 
 .interested-section {
-    
+
     color: #000000;
     background-color: #FFFFFF;
     font-weight: 700;
@@ -180,10 +261,11 @@ text-transform: uppercase;
     line-height: 36px;
     text-transform: uppercase;
     text-decoration: none;
-/** не поняла, почему  цвет ссыли не меняется **/
+    padding: 12px 15px;
 }
 
-.footer-subscribe {
+
+.footer-background-main-page {
     background-image: url("../images/background.jpg");
     color: #FFFFFF;
     background-color: #000000;
@@ -192,12 +274,17 @@ text-transform: uppercase;
     text-align: center;
 }
 
+
 .subscribe-call-to-action {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
-    
+
+}
+
+.footer-background {
+    text-align: center;
 }
 
 .newsletter-button {
@@ -212,16 +299,33 @@ text-transform: uppercase;
 
 .footer-bottom {
     background-color: #FFFFFF;
+    display: flex;
+    color: #000000;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    padding: 40px 70px 30px;
+    align-items: center;
+
 }
 
 .contact-number {
-    color:#000000;
+    color: #000000;
     font-size: 40px;
     line-height: 40px;
     font-style: normal;
     background-color: #FFFFFF;
     text-decoration: none;
+    width: 720px;
 
+}
+
+.list-of-social-media {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 142px;
+    justify-content: space-around;
 }
 
 .inner-header {
@@ -233,21 +337,35 @@ text-transform: uppercase;
     font-size: 60px;
     line-height: 78px;
     color: #FFFFFF;
+    margin: 0;
 }
 
-.breadcumbs-item
-{
+.breadcumbs-item {
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
 }
 
+.breadcrumbs-item-hotels {
+    color: #FFFFFF;
+}
+
 .breadcumbs {
     background-image: url("../images/arrow-to-the-right.svg");
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
 }
 
 fieldset {
     color: #FFFFFF;
+}
+
+.catalog-filters {
+    background-image: url("../images/background-image-filters.jpg");
+    background-repeat: no-repeat;
+    padding-left: 70px;
+    padding-top: 35px;
 }
 
 .category {
@@ -255,6 +373,11 @@ fieldset {
     font-size: 20px;
     line-height: 26px;
     color: #FFFFFF;
+}
+
+section.hotel-catalog label {
+    font-size: 18px;
+    line-height: 21px;
 }
 
 .search-hotel {
@@ -265,6 +388,7 @@ fieldset {
     color: #FFFFFF;
     background-color: #82B3D3;
     font-family: inherit;
+    padding: 14px 15px;
 }
 
 .reset-search {
@@ -275,10 +399,17 @@ fieldset {
     font-family: inherit;
 }
 
+.result-of-search-container {
+    display: flex;
+    padding-left: 72px;
+    padding-right: 73px;
+}
+
 .number-hotels-found-perpage {
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .the-cheapest {
@@ -303,14 +434,25 @@ fieldset {
     line-height: 28px;
 }
 
-.product-list p{
+.product-list {
+    padding: 0;
+    padding-left: 73px;
+    padding-right: 71px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+
+}
+
+.product-list p {
 
     font-size: 18px;
     line-height: 21px;
     color: #333333;
 }
 
-.product-list p.rate{
+.product-list p.rate {
 
     font-size: 16px;
     line-height: 20px;
@@ -318,7 +460,16 @@ fieldset {
     text-transform: uppercase;
     color: #333333;
     background-color: #F2F2F2;
+    padding: 9px 22px 8px 23px;
+    display: block;
+    width: 140px;
 }
+
+.button-productlist-wanting-here {
+    padding: 9px 15px 8px;
+}
+
+
 
 .product-card-button {
     font-weight: 700;
@@ -336,13 +487,28 @@ fieldset {
 }
 
 .added-to-favorites {
-    background-color: #7DB54F; 
+    background-color: #7DB54F;
     text-decoration: none;
 }
 
 .button-add-to-favorites {
-    background-color: #82B3D3; 
+    background-color: #82B3D3;
     text-decoration: none;
+}
+
+.filters-bottom-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 1056px;
+}
+
+.pagination {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-left: 73px;
 }
 
 .pagination-link {
@@ -351,8 +517,16 @@ fieldset {
     line-height: 36px;
     text-align: center;
     text-transform: uppercase;
+    text-decoration: none;
     color: #FFFFFF;
     background: #82B3D3;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-right: 8px;
+    box-sizing: border-box;
+    padding-top: 11px;
+
 }
 
 .pagination-current {
@@ -367,6 +541,13 @@ fieldset {
     background-image: url("../images/arrow.svg");
     background-repeat: no-repeat;
     background-position: right;
+    display: block;
+    margin-right: 51px;
+}
+
+.number-of-hotels-shown-perpage-container {
+    display: flex;
+    padding-right: 71px;
 }
 
 .number-of-hotels-option {
@@ -375,3 +556,10 @@ fieldset {
     color: #333333;
 }
 
+.website-developer {
+    width: 115px;
+}
+
+.button-productlist-wanting-here {
+    padding: 9px 15px 8px;
+}
