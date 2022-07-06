@@ -87,7 +87,6 @@ body {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    /* не понимаю, почему навигация съехала вниз */
 }
 
 .navigation-main-items {
@@ -118,7 +117,6 @@ body {
     text-transform: capitalize;
     text-decoration: none;
     display: block;
-    height: 66px;
     margin-right: 34px;
     list-style-type: none;
     padding-top: 20px;
@@ -293,21 +291,19 @@ li.advantages-item h3 {
 .advantage-2 {
     background-image: url("../images/advantages/living.svg");
     background-repeat: no-repeat;
-    background-position: 163px 80px;
+    background-position: 50% 80px;
 }
 
 .advantage-3 {
     background-image: url("../images/advantages/food.svg");
     background-repeat: no-repeat;
-    background-position: 163px 80px;
+    background-position: 50% 80px;
 }
-
-/* не понимаю , как поместить иконки в преимуществах */
 
 .advantage-4 {
     background-image: url("../images/advantages/souvenir.svg");
     background-repeat: no-repeat;
-    background-position: 168px 80px;
+    background-position: 50% 80px;
 }
 
 .advantage-1,
@@ -382,10 +378,10 @@ li.advantages-item h3 {
     color: #FFFFFF;
     background-color: #000000;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     text-align: center;
     padding-bottom: 94px;
-    padding-top: 92px;
+    padding-top: 94px;
 }
 
 
@@ -408,10 +404,6 @@ li.advantages-item h3 {
 .footer-background {
     text-align: center;
     padding-bottom: 94px;
-    padding-top: 94px;
-}
-
-.footer-background-main-page {
     padding-top: 94px;
 }
 
@@ -638,6 +630,7 @@ section.hotel-catalog label {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
+    grid-area: h3;
 }
 
 .product-list {
@@ -645,14 +638,52 @@ section.hotel-catalog label {
     padding-left: 73px;
     padding-right: 71px;
     padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin: 0;
+    margin-bottom: 96px;
     list-style-type: none;
-
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    column-gap: 18px;
 
 }
+
+.product-card {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 140px 140px;
+    grid-template-areas:
+        "img img"
+        "h3 h3"
+        "p-hotel p-price"
+        "button-details favorites"
+        "stars rate";
+    row-gap: 16px;
+    column-gap: 20px;
+}
+
+.stars {
+    grid-area: stars;
+    padding-top: 10px;
+}
+
+.product-card-image {
+    grid-area: img;
+    object-fit: contain;
+}
+
+.product-card p,
+.product-card-title {
+    margin: 0;
+}
+
+.product-card p:nth-of-type(1) {
+    grid-area: p-hotel;
+}
+
+.product-card p:nth-of-type(2) {
+    grid-area: p-price;
+}
+
 
 .product-list p {
 
@@ -672,6 +703,7 @@ section.hotel-catalog label {
     padding: 9px 22px 8px 23px;
     display: block;
     width: 140px;
+    grid-area: rate;
 }
 
 .navigation-link-wanting-here {
@@ -679,7 +711,6 @@ section.hotel-catalog label {
     width: 160px;
     display: block;
 }
-
 
 
 .product-card-button {
@@ -690,12 +721,15 @@ section.hotel-catalog label {
     text-transform: uppercase;
     color: #FFFFFF;
     text-decoration: none;
+    padding: 9px 15px;
 }
 
 .button-details {
     background-color: #756157;
     text-decoration: none;
+    grid-area: button-details;
 }
+
 
 .added-to-favorites {
     background-color: #7DB54F;
@@ -705,6 +739,11 @@ section.hotel-catalog label {
 .button-add-to-favorites {
     background-color: #82B3D3;
     text-decoration: none;
+}
+
+.button-add-to-favorites,
+.added-to-favorites {
+    grid-area: favorites;
 }
 
 .filters-bottom-container {
